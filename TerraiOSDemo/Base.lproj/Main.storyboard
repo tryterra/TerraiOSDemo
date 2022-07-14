@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="5376" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TerraiOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="9gy-cH-uuh">
+                                <rect key="frame" x="35" y="127" width="354" height="542"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DtX-SA-ziL">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPx-QR-cwg" userLabel="Connect">
+                                                <rect key="frame" x="128" y="8" width="99" height="32"/>
+                                                <accessibility key="accessibilityConfiguration" label="Connect"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <connections>
+                                                    <action selector="connectAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xg-fw-XJj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.17123067010309279" green="0.17123067010309279" blue="0.17123067010309279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" label="Connect"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="KPx-QR-cwg" secondAttribute="bottom" constant="10" id="5Gl-qM-YBh"/>
+                                            <constraint firstItem="KPx-QR-cwg" firstAttribute="top" secondItem="DtX-SA-ziL" secondAttribute="top" constant="8" id="6mI-jP-bL9"/>
+                                            <constraint firstItem="KPx-QR-cwg" firstAttribute="leading" secondItem="DtX-SA-ziL" secondAttribute="leading" constant="128" id="BcX-fN-s7F"/>
+                                            <constraint firstItem="KPx-QR-cwg" firstAttribute="leading" secondItem="DtX-SA-ziL" secondAttribute="leading" priority="1" constant="235" id="Oad-6q-l4f"/>
+                                            <constraint firstAttribute="trailing" secondItem="KPx-QR-cwg" secondAttribute="trailing" constant="127" id="bnJ-zQ-NtL"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gp7-h0-t30">
+                                        <rect key="frame" x="0.0" y="82" width="354" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQs-fi-9zE">
+                                                <rect key="frame" x="128" y="8" width="99" height="32"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="disconnect" label="Disconnect"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <connections>
+                                                    <action selector="disconnectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WOu-1m-rLd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.17123067010000001" green="0.17123067010000001" blue="0.17123067010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="lQs-fi-9zE" firstAttribute="top" secondItem="Gp7-h0-t30" secondAttribute="top" constant="8" id="BAY-Xd-tiL"/>
+                                            <constraint firstItem="lQs-fi-9zE" firstAttribute="leading" secondItem="Gp7-h0-t30" secondAttribute="leading" constant="128" id="heQ-q6-YZX"/>
+                                            <constraint firstAttribute="trailing" secondItem="lQs-fi-9zE" secondAttribute="trailing" constant="127" id="j1b-iu-xxK"/>
+                                            <constraint firstAttribute="bottom" secondItem="lQs-fi-9zE" secondAttribute="bottom" constant="10" id="lCg-VP-XjW"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUn-mz-hnN">
+                                        <rect key="frame" x="0.0" y="164" width="354" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUV-Qo-9LW">
+                                                <rect key="frame" x="235" y="8" width="101" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <connections>
+                                                    <action selector="athleteAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zm0-Lx-avt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vO0-O4-jpb">
+                                                <rect key="frame" x="24" y="8" width="101" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <connections>
+                                                    <action selector="readGlucose:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aDP-My-G0z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.17123067010000001" green="0.17123067010000001" blue="0.17123067010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="QUV-Qo-9LW" secondAttribute="bottom" constant="11" id="Cdx-HK-jQH"/>
+                                            <constraint firstAttribute="bottom" secondItem="vO0-O4-jpb" secondAttribute="bottom" constant="11" id="TZt-LG-eAT"/>
+                                            <constraint firstAttribute="trailing" secondItem="QUV-Qo-9LW" secondAttribute="trailing" constant="18" id="azD-5u-dHp"/>
+                                            <constraint firstItem="QUV-Qo-9LW" firstAttribute="leading" secondItem="aUn-mz-hnN" secondAttribute="leading" constant="235" id="bCs-vF-hSb"/>
+                                            <constraint firstItem="QUV-Qo-9LW" firstAttribute="top" secondItem="aUn-mz-hnN" secondAttribute="top" constant="8" id="bkV-a2-VcZ"/>
+                                            <constraint firstItem="QUV-Qo-9LW" firstAttribute="leading" secondItem="vO0-O4-jpb" secondAttribute="trailing" constant="110" id="ds6-wK-VjL"/>
+                                            <constraint firstItem="vO0-O4-jpb" firstAttribute="leading" secondItem="aUn-mz-hnN" secondAttribute="leading" constant="24" id="mrD-4A-nmr"/>
+                                            <constraint firstItem="vO0-O4-jpb" firstAttribute="top" secondItem="aUn-mz-hnN" secondAttribute="top" constant="8" id="oEs-Dm-XXb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eu6-6y-UVL">
+                                        <rect key="frame" x="0.0" y="246" width="354" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64B-k1-3DY">
+                                                <rect key="frame" x="237" y="9" width="99" height="32"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <connections>
+                                                    <action selector="activityAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZY-fo-ove"/>
+                                                </connections>
+                                            </button>
+                                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="YOp-Mg-kwp">
+                                                <rect key="frame" x="-23" y="9" width="245" height="31"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
+                                                <connections>
+                                                    <action selector="activityDateChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="lGB-o3-YEb"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.17123067010000001" green="0.17123067010000001" blue="0.17123067010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="64B-k1-3DY" firstAttribute="leading" secondItem="YOp-Mg-kwp" secondAttribute="trailing" constant="15" id="Jdy-wq-oyt"/>
+                                            <constraint firstItem="64B-k1-3DY" firstAttribute="top" secondItem="eu6-6y-UVL" secondAttribute="top" constant="9" id="L8A-tL-b3x"/>
+                                            <constraint firstAttribute="trailing" secondItem="64B-k1-3DY" secondAttribute="trailing" constant="18" id="McY-Eh-Vmk"/>
+                                            <constraint firstItem="YOp-Mg-kwp" firstAttribute="top" secondItem="eu6-6y-UVL" secondAttribute="top" constant="9" id="Qtz-me-S6G"/>
+                                            <constraint firstAttribute="bottom" secondItem="64B-k1-3DY" secondAttribute="bottom" constant="9" id="bWr-UI-vxN"/>
+                                            <constraint firstItem="64B-k1-3DY" firstAttribute="leading" secondItem="eu6-6y-UVL" secondAttribute="leading" constant="237" id="jsJ-Gu-fxl"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oe7-r9-XCP">
+                                        <rect key="frame" x="0.0" y="328" width="354" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC4-Gp-dHj">
+                                                <rect key="frame" x="237" y="10" width="100" height="32"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <connections>
+                                                    <action selector="bodyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EvF-9h-K9K"/>
+                                                </connections>
+                                            </button>
+                                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="ok8-oN-OgS">
+                                                <rect key="frame" x="-25" y="9" width="245" height="31"/>
+                                                <connections>
+                                                    <action selector="bodyDateChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="cw6-C3-YoF"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.17123067010000001" green="0.17123067010000001" blue="0.17123067010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="ok8-oN-OgS" firstAttribute="top" secondItem="oe7-r9-XCP" secondAttribute="top" constant="9" id="2cK-9q-jQA"/>
+                                            <constraint firstItem="dC4-Gp-dHj" firstAttribute="top" secondItem="oe7-r9-XCP" secondAttribute="top" constant="10" id="KcA-En-Imn"/>
+                                            <constraint firstItem="dC4-Gp-dHj" firstAttribute="leading" secondItem="ok8-oN-OgS" secondAttribute="trailing" constant="15" id="Lyo-nx-nJa"/>
+                                            <constraint firstItem="dC4-Gp-dHj" firstAttribute="leading" secondItem="oe7-r9-XCP" secondAttribute="leading" constant="237" id="Pq3-VR-82B"/>
+                                            <constraint firstAttribute="bottom" secondItem="dC4-Gp-dHj" secondAttribute="bottom" constant="8" id="VqP-j2-7nf"/>
+                                            <constraint firstAttribute="trailing" secondItem="dC4-Gp-dHj" secondAttribute="trailing" constant="18" id="xpF-ak-RtN"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Iz-Cd-tSS">
+                                        <rect key="frame" x="0.0" y="410" width="354" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpq-EF-iHF">
+                                                <rect key="frame" x="238" y="10" width="98" height="32"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <connections>
+                                                    <action selector="dailyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ob-Pi-aNC"/>
+                                                </connections>
+                                            </button>
+                                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="9uJ-uJ-J4f">
+                                                <rect key="frame" x="-23" y="9" width="245" height="31"/>
+                                                <connections>
+                                                    <action selector="dailyDateChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="KnF-mJ-lfw"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.17123067010000001" green="0.17123067010000001" blue="0.17123067010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="9uJ-uJ-J4f" firstAttribute="top" secondItem="5Iz-Cd-tSS" secondAttribute="top" constant="9" id="3w9-Ok-k3n"/>
+                                            <constraint firstItem="jpq-EF-iHF" firstAttribute="top" secondItem="5Iz-Cd-tSS" secondAttribute="top" constant="10" id="CrA-8C-11e"/>
+                                            <constraint firstAttribute="bottom" secondItem="jpq-EF-iHF" secondAttribute="bottom" constant="8" id="JKL-Kl-dnG"/>
+                                            <constraint firstItem="jpq-EF-iHF" firstAttribute="leading" secondItem="9uJ-uJ-J4f" secondAttribute="trailing" constant="15" id="S7f-LY-BHm"/>
+                                            <constraint firstAttribute="trailing" secondItem="jpq-EF-iHF" secondAttribute="trailing" constant="18" id="n8h-Ki-0QI"/>
+                                            <constraint firstItem="jpq-EF-iHF" firstAttribute="leading" secondItem="5Iz-Cd-tSS" secondAttribute="leading" constant="238" id="ypm-un-pJl"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30u-bn-kf6">
+                                        <rect key="frame" x="0.0" y="492" width="354" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phd-a4-aCT">
+                                                <rect key="frame" x="237" y="8" width="98" height="32"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                <connections>
+                                                    <action selector="sleepAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ePG-cP-M9i"/>
+                                                </connections>
+                                            </button>
+                                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="73j-lT-brB">
+                                                <rect key="frame" x="-26" y="9" width="245" height="31"/>
+                                                <connections>
+                                                    <action selector="sleepDateChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="00x-uT-47e"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.17123067010000001" green="0.17123067010000001" blue="0.17123067010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="73j-lT-brB" firstAttribute="top" secondItem="30u-bn-kf6" secondAttribute="top" constant="9" id="7HV-eP-bJa"/>
+                                            <constraint firstAttribute="trailing" secondItem="phd-a4-aCT" secondAttribute="trailing" constant="19" id="BTR-Fc-Gby"/>
+                                            <constraint firstItem="phd-a4-aCT" firstAttribute="top" secondItem="30u-bn-kf6" secondAttribute="top" constant="8" id="Erv-0b-HCB"/>
+                                            <constraint firstItem="phd-a4-aCT" firstAttribute="leading" secondItem="30u-bn-kf6" secondAttribute="leading" constant="237" id="azF-KU-6p5"/>
+                                            <constraint firstItem="phd-a4-aCT" firstAttribute="leading" secondItem="73j-lT-brB" secondAttribute="trailing" constant="15" id="bIH-6H-q0k"/>
+                                            <constraint firstAttribute="bottom" secondItem="phd-a4-aCT" secondAttribute="bottom" constant="10" id="pzT-SP-1x0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="terra_logo_dark-cropped" translatesAutoresizingMaskIntoConstraints="NO" id="znY-vJ-Ywl">
+                                <rect key="frame" x="72" y="743" width="281" height="62"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="znY-vJ-Ywl" secondAttribute="bottom" constant="57" id="Cef-bI-CIf"/>
+                            <constraint firstItem="znY-vJ-Ywl" firstAttribute="top" secondItem="9gy-cH-uuh" secondAttribute="bottom" constant="74" id="Wjk-2Q-b6y"/>
+                            <constraint firstItem="9gy-cH-uuh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="hfh-F2-CnJ"/>
+                            <constraint firstItem="znY-vJ-Ywl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="iTg-1G-B5V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="znY-vJ-Ywl" secondAttribute="trailing" constant="61" id="mQl-yW-kyB"/>
+                            <constraint firstItem="9gy-cH-uuh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="5" id="xjF-mK-Z25"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activity" destination="64B-k1-3DY" id="Rlf-U1-VH8"/>
+                        <outlet property="activityDatePicker" destination="YOp-Mg-kwp" id="cmC-Er-CpH"/>
+                        <outlet property="athlete" destination="QUV-Qo-9LW" id="jKk-v2-2gD"/>
+                        <outlet property="body" destination="dC4-Gp-dHj" id="I8n-Nc-V0Z"/>
+                        <outlet property="bodyDatePicker" destination="ok8-oN-OgS" id="KpT-DT-T3g"/>
+                        <outlet property="buttonContainer1" destination="DtX-SA-ziL" id="U2z-yY-5BW"/>
+                        <outlet property="buttonContainer2" destination="aUn-mz-hnN" id="4fq-vA-mld"/>
+                        <outlet property="buttonContainer3" destination="eu6-6y-UVL" id="SO2-zA-YqI"/>
+                        <outlet property="buttonContainer4" destination="oe7-r9-XCP" id="ocY-CJ-EXd"/>
+                        <outlet property="buttonContainer5" destination="5Iz-Cd-tSS" id="iAN-6l-yMr"/>
+                        <outlet property="buttonContainer6" destination="30u-bn-kf6" id="2VI-Tk-Kvy"/>
+                        <outlet property="buttonContainer7" destination="Gp7-h0-t30" id="tig-TV-Q0p"/>
+                        <outlet property="connect" destination="KPx-QR-cwg" id="ymy-f8-hcS"/>
+                        <outlet property="daily" destination="jpq-EF-iHF" id="7o4-Go-cON"/>
+                        <outlet property="dailyDatePicker" destination="9uJ-uJ-J4f" id="pYE-KC-Im8"/>
+                        <outlet property="disconnect" destination="lQs-fi-9zE" id="oFW-bP-siz"/>
+                        <outlet property="readGlucose" destination="vO0-O4-jpb" id="LAb-Mo-SFr"/>
+                        <outlet property="sleep" destination="phd-a4-aCT" id="v5w-Sj-r38"/>
+                        <outlet property="sleepDatePicker" destination="73j-lT-brB" id="UgF-Uk-yDu"/>
+                        <segue destination="GGr-GT-yor" kind="presentation" identifier="PresentWebView" id="RfF-zi-eNb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-830.43478260869574" y="-701.11607142857144"/>
+        </scene>
+        <!--WebViewController-->
+        <scene sceneID="GOv-Oh-TmR">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" title="WebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GGr-GT-yor" customClass="WebViewController" customModule="TerraiOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EUc-Sc-mSI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Q5-cV-rQL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="txe-gN-YYo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JaY-Ps-Qa5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="-701"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <image name="terra_logo_dark-cropped" width="718" height="150.19999694824219"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
