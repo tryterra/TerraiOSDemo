@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tryterra/TerraiOS",
       "state" : {
-        "branch" : "master",
-        "revision" : "812316fa5cd9a32aa4c6ea61fa49e3023d035c96"
+        "revision" : "2d6d2a4686691d7f534c230c100bf990e713911b",
+        "version" : "1.0.16"
       }
     }
   ],

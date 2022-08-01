@@ -8,5 +8,5 @@
 import Foundation
 
 
-let DEVID = "DEV ID"
-let XAPIKEY = "X API KEY"
+let DEVID = "testingElliott"
+let XAPIKEY = "pDRlqbEtSl3sR03dfL4gT98fkXgJue672oMMIIsn"

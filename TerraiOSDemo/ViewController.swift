@@ -207,7 +207,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func dailyAction(_ sender: UIButton){
-        terraClient?.getDaily(type: .APPLE_HEALTH, startDate: dailyDate, endDate: dailyDate.addingTimeInterval(86400)){(success, data) -> Void in
+        terraClient?.getDaily(type: .APPLE_HEALTH, startDate: Date().addingTimeInterval(-86400), endDate: Date()){(success, data) -> Void in
             print("Done function")
             print(data)
         }
@@ -251,6 +251,14 @@ class ViewController: UIViewController {
         dailyDate = sender.date
     }
     
+//    //This will get you a user_id and an authentication URL for which you will need to show to your user for auth.
+//    //The url is on fitbit's end and after completion, you can use the user_id to get data.
+//    var terraAuthClient = TerraAuthClient(devId: <#T##String#>, xAPIKey: <#T##String#>).authenticateUser(resource: <#T##String#>)
+//
+//    
+//    //Insert the user ID here from step before
+//    var terra = TerraClient(userId: <#T##String#>, devId: <#T##String#>, xAPIKey: <#T##String#>)
+//    ... terra.getActivity()
 }
 
 
@@ -280,9 +288,14 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
                  print(urlStr)
                  if urlStr.contains("success?resource=apple") {
                      webView.stopLoading()
-                     terraClient = Terra(devId: DEVID, referenceId: "testingNewiOS", bodyTimer: 60, dailyTimer: 120, nutritionTimer: 180, sleepTimer: 240)
+                     let terraClient = Terra(devId: "DEV_ID", referenceId: "REFERENCE_ID", bodyTimer: 60, dailyTimer: 60, nutritionTimer: 60, sleepTimer: 60)
                      
-                     terraClient?.initConnection(type: Connections.APPLE_HEALTH, token: generateAuthToken(), permissions: Set([Permissions.NUTRITION, Permissions.ACTIVITY, Permissions.ATHLETE, Permissions.SLEEP, Permissions.BODY, Permissions.DAILY]), schedulerOn: false)
+                     terraClient.initConnection(type: Connections.APPLE_HEALTH, token: "TOKEN", permissions: Set([Permissions.NUTRITION, Permissions.ACTIVITY, Permissions.ATHLETE, Permissions.SLEEP, Permissions.BODY, Permissions.DAILY]), schedulerOn: false){success in
+                        
+                         terraClient?.getDaily(type: .APPLE_HEALTH, startDate: Date().addingTimeInterval(-86400), endDate: Date()){(success, data) in
+                             print(data)
+                         }
+                     }
                      
                      terraClient?.initConnection(type: .FREESTYLE_LIBRE, token: generateAuthToken())
                      
